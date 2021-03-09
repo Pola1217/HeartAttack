@@ -41,8 +41,8 @@ public class Principal extends PApplet{
 		
 	//fondos generales
 	inicio = loadImage ("data/Pinicio.PNG");
-	instruccion = loadImage ("data/Prules.png");
-	lost = loadImage ("data/lost.PNG");
+	instruccion = loadImage ("data/Prules.PNG");
+	lost = loadImage ("data/Lost.PNG");
 	
 	//arma
 	arma = new Arma (this, 600, 725);
@@ -281,8 +281,7 @@ public class Principal extends PApplet{
 		break;
 		
 		case 2:
-			
-			//shootAlien ();
+		
 			clickAlien ();
 				
 		break;
@@ -292,6 +291,9 @@ public class Principal extends PApplet{
 			if (dist(mouseX, mouseY, 629, 564) < 30) {
 				
 				screen = 0;
+				
+				exit();
+				
 			}
 			
 		break;
@@ -322,52 +324,11 @@ public class Principal extends PApplet{
 			score+=20;
 			
 			}
+			
 		}
-		
 		
 	}
 	
-	/*private void shootAlien () {
-	
-		for (int i = 0; i < alien.size(); i++) {
-			
-			if (dist(mouseX, mouseY, alien.get(i).getX() + 70, alien.get(i).getY() + 95) < 40) {
-				
-				stroke(77, 133, 69);
-				strokeWeight(10);
-				line(arma.getX() + 65, arma.getY() + 93, alien.get(i).getX() + 65, alien.get(i).getY() + 93);
-
-				System.out.println("hello");
-				
-				alien.remove(i);
-				
-				score += 10;
-			}
-				
-			}
-
-			
-			for (int i = 0; i < alien1.size(); i++) {
-				
-				if (dist(mouseX, mouseY, alien1.get(i).getX() + 70, alien1.get(i).getY() + 95) < 40) {
-					
-					stroke(77, 133, 69);
-					strokeWeight(10);
-					line(arma.getX() + 65, arma.getY() + 93, alien1.get(i).getX() + 65, alien1.get(i).getY() + 93);
-
-					System.out.println("hello");
-					
-					alien1.remove(i);
-					
-					score += 20;
-				}
-					
-				}
-
-
-		
-	}*/
-	
-	}		
+}
 
 
